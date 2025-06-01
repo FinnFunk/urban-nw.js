@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Urban NW Dev</title>
+    <script>
+      const check = () => {
+        fetch("http://localhost:5173")
+          .then(() => (window.location.href = "http://localhost:5173"))
+          .catch(() => setTimeout(check, 500));
+      };
+      check();
+    </script>
+  </head>
+  <body>
+    <h1>Warte auf Vite-Dev-Server…</h1>
+  </body>
+</html>
